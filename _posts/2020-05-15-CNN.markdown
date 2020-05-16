@@ -1,0 +1,120 @@
+---
+layout: analytics_post
+title:  "CNN (Convolutional Neural Network)"
+date:   2019-02-14 01:12:27 -0400
+categories: jekyll update
+permalink: "/convolution-in-cnn"
+---
+        
+<h3>Introduction</h3>
+
+  A convolutional neural network is a special type of neural network. It is special in terms of its application
+  .i.e. it is almost exclusively used in image classification. The word "Convolution" in Convolution Neural Network 
+  (from here on referred as CNN) refers to the operation done on the image we read or, intend to process for 
+  learning. Neural Network follows this convolution operation and hence we got the name, convolution neural
+  network. In order to better understand CNN one should be comfortable with the idea that image is nothing
+  but a matrix of numbers. Whenever we process an image, we are reading, processing and studying those numbers.
+
+  In order to understand CNN one needs to understand some terms associated with it. Some common terms with 
+  brief description are given below, detailed process on how those operations are carried out will be described
+  later:
+<ul>
+  <li><b>Convolution matrix or, kernel</b>
+      
+It is a matrix that extracts features from an image.
+Size and nature of matrix depends on the application it is being used for.
+      
+  </li>
+  <li><b>Pooling</b>
+          
+It is done to carryout downsampling of feature matrix or, image obtained after convolution operation. Downsampling in this case refers to reducing the size of image matrix.
+Idea behind pooling is very simple, from a given <code>(n,n)</code> matrix sample we select a value that is representative of that <code>(n,n)</code> portion.
+Convolution neural netwok are said to be indifferent to spatial information .i.e. cannot account for the position of feature in image. 
+          
+  </li>
+  <li><b>Activation</b>
+          
+It determines what values pass and what do not pass to the neural network. It can be considered as a threshold
+for result of neuron to pass through it or, mapping of output of the neural network.
+If the operation does not result in output that is above threshold, it does not pass through to neural network.
+For example, ReLU activation is <code>max(0,x)</code>
+              
+      </li>
+  </ul>
+
+
+
+<h3>How to CNN</h3>
+
+
+<!--div style="width:image width px; font-size:80%; text-align:center;"-->
+<img src="https://raw.githubusercontent.com/Amitsrma/amitsrma.github.io/master/Image/CNN/CNN_image_1.PNG" alt="CNN_1"  width="100%">
+Image: Convolution neural network. In this case, the original image is passed through 5 convolution kernels/matrices of
+size <code>n_1`x`n_1</code> and pooling. This results in an output that is <code>n_1`x`n_1`x`5</code> to second convolution layer. This result is then passedthrough <code>n_2`x`n_2`x`5`x`10</code> convolution kernels. Here <code>n_2`x`n_2</code> is the size of convolution matrix, 5 is the depth of the convolution
+and 10 is the number of convolution kernels/matrices we have for this layer. 
+
+
+In the Image above, original image refers to the image under study, image we are going to feed to the neural
+network. For this instance let us consider how the network will work with a single image; a neural network will work
+with many such images to generate result (which will be extension of the single image's case). <code>"Convolution layer 1"</code> refers
+to result of first convolution operation on <code>Image</code>. There are 5 of <code>(n_1,n_1)</code> sized kernels that work on <code>"Original Image"</code>
+to produce first convolution layer. <code>"Conv layer 2"</code> refers to second convolution layer. To get this, we have 10 kernels of size
+<code>(n_2,n_2,5)</code> that is applied to <code>"convolution layer 1"</code>. Convolution operation is explained in upcoming sections.
+
+
+A couple of ideas to get comfortable with while dealing with CNN is that an image is made up of
+numbers. It is a wildest combination of different numbers that is interpreted by computer as color. Special feature of
+convolution neural network is that it can extract specific features from the image and when we talk about features,  it refers to specific set of numbers that are correspond to those features. So when we talk about CNN extracting
+features, we are identifying or, trying to identify the set of numbers that define the features we are interested in.
+
+
+As mentioned above, CNN is a special type of neural network which has some special operation called convolution
+applied to input before moving forward to neural network. Lets get into convolution operation now. 
+
+<h4>Convolution</h4>
+<img src="https://raw.githubusercontent.com/Amitsrma/amitsrma.github.io/master/Image/CNN/convolution_kernel_result.PNG" alt="convolution_matrix"  height="178" width="906">
+
+Let matrix "img" represent the image we want to analyze through neural network. We want to get efficient result and we have
+recently come across this tool called convolution and want to test its power. How we do it is following:
+<ul>
+<li>We have an image of certain size, say <code>(n,n)</code>. Here <code>(n,n)</code> means that image's height and width are equal and are <code>n</code> pixels.
+Each color in the pixel is represented as a number and thus we get a <code>(n,n)</code> matrix.</li>
+<li>There is a kernel matrix. Its size is strictly less than or, equal to the size of image matrix; .i.e. if kernel
+matrix is of size <code>(m,m)</code>, then <code>m < n</code>. Kernels are responsible for identifying the features that neural network detects
+</li>
+<li>During convolution operation, an extract of image matrix equal to the size of kernel matrix is taken, element-wise
+multiplication is carried out and sum of all elements of resulting matrix is taken. This resulting number is becomes an
+element of the Result matrix, one that is obtained after convolution operation.</li>
+</ul>
+
+Following steps show how we get each element of Result matrix above. We first extract from image matrix a matrix of size equal
+to that of kernel matrix, carryout element-wise multiplication and add the result. That result is first element of Result matrix.
+
+<img src="https://raw.githubusercontent.com/Amitsrma/amitsrma.github.io/master/Image/CNN/Convolution_broken_down.PNG" alt="convolution_broken_down" height="200" width="548">
+
+Following image from Stanford University gives visual illustration of convolution process.
+
+<img src="http://deeplearning.stanford.edu/wiki/images/6/6c/Convolution_schematic.gif" alt="convolution_broken_down" height="400" width="500">
+
+<h4>Pooling</h4>
+
+Kernel matrices combined with convolution operation identify or, accentuate certain features that we want the neural network
+to detect. Pooling operation detects those features. Convlution operation makes it easier to extract certain specific features
+from the image we are studying. This  operation, pooling, down-sizes the image .i.e. reduces dimension of image, and at the 
+same time takes the necessary information from the image. Just as kernel matrix is mapped over
+image matrix, a specific size for pooling is considered (say <code>(2,2) or (3,3) or (4,4)</code> matrix) and it is mapped over the result
+of convolution operation.
+
+
+Depending on the type of pooling operation used, we perform some computation. Some common pooling operation is maxpooling and
+average-pool. Maxpooling selects the maximum of all the elements in pool-size to result of convolution operation whereas
+average-pool takes average of all the elements present in the pool size we are considering. Pool-size refers 
+to the size of matrix considered for pooling.
+
+
+For the Result matrix above, is we consider a pool-sie of <code>(2,2)</code>, we get first element that is maximum of <code>Result_11</code>,
+<code>Result_12</code>,<code>Result_21</code>,<code>Result_22</code> .i.e. <code>max(-4,-4,10,9)</code> <code>=</code> <code>10`.
+
+
+In case of average-pool, it would be average of <code>Result_11</code>, <code>Result_12</code>, <code>Result_21</code>, <code>Result_22</code> .i.e. <br><code>(-4-4+10+9)/4 
+= 2.75</code>.
