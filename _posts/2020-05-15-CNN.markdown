@@ -10,33 +10,30 @@ permalink: "/convolution-in-cnn"
 
   A convolutional neural network is a special type of neural network. It is special in terms of its application
   .i.e. it is almost exclusively used in image classification. The word "Convolution" in Convolution Neural Network 
-  (from here on referred as CNN) refers to the operation done on the image we read or, intend to process for 
-  learning. Neural Network follows this convolution operation and hence we got the name, convolution neural
-  network. In order to better understand CNN one should be comfortable with the idea that image is nothing
-  but a matrix of numbers. Whenever we process an image, we are reading, processing and studying those numbers.
+  (from here on referred as CNN) refers to the operation done on the image we read or, intend to process for learning. Neural Network follows this convolution operation and hence we got the name, convolution neural network. To better understand CNN one should be comfortable with the idea that image is nothing but a matrix of numbers. Whenever we process an image, we are reading, processing, and studying those numbers.
 
-  In order to understand CNN one needs to understand some terms associated with it. Some common terms with 
-  brief description are given below, detailed process on how those operations are carried out will be described
+  To understand CNN one needs to understand some terms associated with it. Some common terms with 
+  a brief description is given below, detailed process on how those operations are carried out will be described
   later:
 <ul>
   <li><b>Convolution matrix or, kernel</b>
       
 It is a matrix that extracts features from an image.
-Size and nature of matrix depends on the application it is being used for.
+The size and nature of the matrix depend on the application it is being used for.
       
   </li>
   <li><b>Pooling</b>
           
-It is done to carryout downsampling of feature matrix or, image obtained after convolution operation. Downsampling in this case refers to reducing the size of image matrix.
+It is done to carry out the downsampling of the feature matrix or, image obtained after convolution operation. Downsampling, in this case, refers to reducing the size of the image matrix.
 Idea behind pooling is very simple, from a given <code>(n,n)</code> matrix sample we select a value that is representative of that <code>(n,n)</code> portion.
-Convolution neural netwok are said to be indifferent to spatial information .i.e. cannot account for the position of feature in image. 
+Convolution neural network is said to be indifferent to spatial information .i.e. cannot account for the position of the feature in an image. 
           
   </li>
   <li><b>Activation</b>
           
-It determines what values pass and what do not pass to the neural network. It can be considered as a threshold
-for result of neuron to pass through it or, mapping of output of the neural network.
-If the operation does not result in output that is above threshold, it does not pass through to neural network.
+It determines what values pass and what does not pass to the neural network. It can be considered as a threshold
+for the result of a neuron to pass through it or, mapping of the output of the neural network.
+If the operation does not result in output that is above the threshold, it does not pass through to a neural network.
 For example, ReLU activation is <code>max(0,x)</code>
               
       </li>
@@ -63,13 +60,13 @@ to produce first convolution layer. <code>"Conv layer 2"</code> refers to second
 
 
 A couple of ideas to get comfortable with while dealing with CNN is that an image is made up of
-numbers. It is a wildest combination of different numbers that is interpreted by computer as color. Special feature of
-convolution neural network is that it can extract specific features from the image and when we talk about features,  it refers to specific set of numbers that are correspond to those features. So when we talk about CNN extracting
+numbers. It is the wildest combination of different numbers that are interpreted by a computer as color. A special feature of
+the convolution neural network is that it can extract specific features from the image and when we talk about features,  it refers to a specific set of numbers that correspond to those features. So when we talk about CNN extracting
 features, we are identifying or, trying to identify the set of numbers that define the features we are interested in.
 
 
 As mentioned above, CNN is a special type of neural network which has some special operation called convolution
-applied to input before moving forward to neural network. Lets get into convolution operation now. 
+applied to input before moving forward to a neural network. Let us get into the convolution operation now. 
 
 <h4>Convolution</h4>
 <img src="https://raw.githubusercontent.com/Amitsrma/amitsrma.github.io/master/Image/CNN/convolution_kernel_result.PNG" alt="convolution_matrix"  height="178" width="906">
@@ -87,29 +84,27 @@ multiplication is carried out and sum of all elements of resulting matrix is tak
 element of the Result matrix, one that is obtained after convolution operation.</li>
 </ul>
 
-Following steps show how we get each element of Result matrix above. We first extract from image matrix a matrix of size equal
-to that of kernel matrix, carryout element-wise multiplication and add the result. That result is first element of Result matrix.
+The following steps show how we get each element of the Result matrix above. We first extract from the image matrix a matrix of size equal
+to that of kernel matrix, carryout element-wise multiplication, and add the result. That result is the first element of the Result matrix.
 
 <img src="https://raw.githubusercontent.com/Amitsrma/amitsrma.github.io/master/Image/CNN/Convolution_broken_down.PNG" alt="convolution_broken_down" height="200" width="548">
 
-Following image from Stanford University gives visual illustration of convolution process.
+The following image from Stanford University gives a visual illustration of the convolution process.
 
 <img src="http://deeplearning.stanford.edu/wiki/images/6/6c/Convolution_schematic.gif" alt="convolution_broken_down" height="400" width="500">
 
 <h4>Pooling</h4>
 
 Kernel matrices combined with convolution operation identify or, accentuate certain features that we want the neural network
-to detect. Pooling operation detects those features. Convlution operation makes it easier to extract certain specific features
-from the image we are studying. This  operation, pooling, down-sizes the image .i.e. reduces dimension of image, and at the 
-same time takes the necessary information from the image. Just as kernel matrix is mapped over
-image matrix, a specific size for pooling is considered (say <code>(2,2) or (3,3) or (4,4)</code> matrix) and it is mapped over the result
-of convolution operation.
+to detect. The pooling operation detects those features. Convolution operation makes it easier to extract certain specific features
+from the image we are studying. This operation, pooling, down-sizes the image .i.e. reduces the dimension of the image, and at the same time takes the necessary information from the image. Just as the kernel matrix is mapped over
+the image matrix, a specific size for pooling is considered (say <code>(2,2) or (3,3) or (4,4)</code> matrix) and it is mapped over the result
+of the convolution operation.
 
 
-Depending on the type of pooling operation used, we perform some computation. Some common pooling operation is maxpooling and
-average-pool. Maxpooling selects the maximum of all the elements in pool-size to result of convolution operation whereas
-average-pool takes average of all the elements present in the pool size we are considering. Pool-size refers 
-to the size of matrix considered for pooling.
+Depending on the type of pooling operation used, we perform some computation. Some common pooling operation is max-pooling and
+average-pool. Max-pooling selects the maximum of all the elements in pool-size to result of convolution operation whereas
+average-pool takes an average of all the elements present in the pool size we are considering. Pool-size refers to the size of the matrix considered for pooling.
 
 
 For the Result matrix above, is we consider a pool-sie of <code>(2,2)</code>, we get first element that is maximum of <code>Result_11</code>,
