@@ -5,7 +5,8 @@
 layout: analytics_home
 ---
 
-Hi, I am Amit Sharma. I am a person of many interests and hobbies. I like to have thought provoking conversations, introspect about my surrounding (how it affects me and viceversa) and involve in constructive actions that are directed to solving problem.
+Hi, I am Amit, someone who likes to have thought provoking conversations, introspect about my surroundings, how it affects me and vice versa, and involve in constructive actions that are directed towards solving problems. My interest lies in machine learning and data analysis. 
 
-I like to think I know something about technology. I am very fond of machine learning and data analysis. I spend my free time reading financial news, development in the sectors I understand and I am interested in and sometimes betting on stock market, I try to place educated bets. I did understand that I like long game rather than short term trading but I have to admit, nothing compares to the thrill of getting in low and coming out high.
+Usually, I spend my free time reading financial news and development in different sectors I understand and I am interested in. I have been practicing trading stocks and my current goal is to place educated bets.
 
+I did understand that I like long term trading rather than short term but I have to admit, nothing compares to the thrill of getting in low and getting out high.
