@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: analytics_page
 title: About
 permalink: /about/
 ---
