@@ -4,7 +4,6 @@
 
 layout: analytics_home
 ---
-Data
 
 Hi, I am Amit Sharma. I am a person of many interests and hobbies. I like to have thought provoking conversations, introspect about my surrounding (how it affects me and viceversa) and involve in constructive actions that are directed to solving problem.
 
