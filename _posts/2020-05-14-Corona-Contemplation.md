@@ -8,9 +8,9 @@ I think we all can agree that our ideas and/or beliefs are the outcome of the in
 
 <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
 
-We all have some ideas about the evolution of the crisis. It started from the bat in China, China locked itself down then followed the world. There were significant deaths in China, followed by Italy, Spain, the USA, the UK which led governments to panic and made them lock the country down. People were, and to this date are, asked to keep a distance from each other, avoid physical contact and go out of their house only if necessary.
+We all have some ideas about the evolution of the crisis. It started from the bat in China, China locked itself down then followed the world. There were significant deaths in China, followed by Italy, Spain, USA, UK which led governments to act and made them lock the country down. People were, and to this date are, asked to keep a distance from each other, avoid physical contact and go out of their house only if necessary.
 
-A couple of reasons that caused panic did not sit right with me. Some of them were:
+Some reasons that led for panic to not sit right with me are:
 <ol>
     <li>Asymptomatic Carriers.</li>
     <li>Unavailability of testing kits.</li>
