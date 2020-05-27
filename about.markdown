@@ -26,9 +26,8 @@ I like the idea that we can measure the correlation of the major events of the s
     <code>GitHub Link</code>
     </a>
     </li>
-    While using Bloomberg terminal and checking news on SeekingAlpha, I would see new news automatically updated.
-    My curiosity about how one might go about designing a system that reconciles news from multiple sources made me start and complete the project. The challenge for me at the point was to bring multiple frameworks to write information to the same database without conflict.<br>
-    After accomplishing the above, I realized that some news are long and it takes a long time to understand what the whole body of text is saying. So I started thinking about how fast you could understand the news, just by reading a couple of lines. Can we properly summarize the text?
+    I would see new information automatically updated while using the Bloomberg terminal and SeekingAlpha. My curiosity about how to design a system that reconciles news from multiple sources made me start and complete the project. The challenge for me was to bring various frameworks to write information to the same database without conflict.<br>
+    After accomplishing the above, I realized that some news is long and it takes a long time to understand what the whole body of text is saying. So I started thinking about how fast you could understand the news, just by reading a couple of lines. Can we properly summarize the text?
     <br>
     <ol>
     <li>
@@ -80,11 +79,8 @@ Automatic Identification of Inventive Concepts of Patent Documents (Bell Advance
     <li>Completed unsupervised classification of text documents using LDA, NNMF and LSA algorithms.</li>
     <li>Used nltk, gensim and spacy for feature engineering and validating the model to decide which
     algorithm to adopt.</li>
-    <li>Automated data extraction from website, using python’s bs4 and requests libraries. Extracted text
-    is used for training and testing.</li>
-    <li>Automated data extraction from xml files of size over 600MB. Data extracted through webscraping was noisy
-    and classification criteria could not be set in concrete by text extraction through web scrapping.
-    Used xml library with assumption that quadratic blowup would not occur since USPTO's bulkdata was used.</li>
+    <li>Identified major semiconductor businesses and their competitions by carrying out backward citation analysis of documents. Created new dataset from scratch for this process.</li>
+    <li>Automated data extraction from xml files of size over 1000MB. Data was extracted with web scrapping but extract were polluted due to inconsistent result from search queries. Used xml library with assumption that quadratic blowup would not occur since USPTO is creating bulk data.</li>
     </ol>
 <li><b>User privacy Problems in Data Mining</b></li>
 <ol>
