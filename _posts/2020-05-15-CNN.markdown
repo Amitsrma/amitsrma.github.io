@@ -2,7 +2,7 @@
 layout: analytics_post
 title:  "CNN (Convolutional Neural Network)"
 date:   2019-02-14 01:12:27 -0400
-categories: jekyll update
+categories: Tech
 permalink: "/convolution-in-cnn"
 ---
         

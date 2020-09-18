@@ -156,7 +156,7 @@ Automatic Identification of Inventive Concepts of Patent Documents (Bell Advance
     </li>
     <li>
     <a target="_blank" href="https://www.edx.org/course/introduction-to-computational-thinking-and-data-science-2">
-    6.00.2x</a>: Introduction to Computational Thinking and Data Science</a>
+    6.00.2x</a>: Introduction to Computational Thinking and Data Science
     <code>Certificate Link</code>
     </li>
     <li> <a target="_blank" href="https://www.coursera.org/learn/game-theory-2">
